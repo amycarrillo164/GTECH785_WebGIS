@@ -8,35 +8,26 @@ var tiles = L.tileLayer('https://tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?acce
  
 
 //Styling the "totalpop" layer
-const style_feature = (feature) => {
-    const d = feature.properties.TotalPop;
-    let fillColor = null;
-
-    if (d > 1500) {
-        fillColor = "#0868ac"
-    } else if (d > 3000) {
-        fillColor = "#43a2ca"
-    } else if (d > 1000) {
-        fillColor = "#7bccc4"
-    } else if (d > 500) {
-        fillColor = "#a8ddb5"
-    } else if (d > 200) {
-        fillColor = "#ccebc5"
-    } else if (d < 0){
-        fillColor ="#f0f9e8"
-    } else {
-        fillColor = "#454545"
-    }
-    return { 
-        fillColor,
-        fillOpacity: 0.75,
-        color: "#ffffff",
-        opacity: .8,
-        weight: 2,
-        dashArray: '3'
-    }
+function getColor(d) {
+    return d > 3000 ? '#0868ac' :
+           d > 1500  ? '#43a2ca' :
+           d > 1000  ? '#7bccc4' :
+           d > 500  ? '#a8ddb5' :
+           d > 250   ? '#ccebc5' :
+           d < 0    ? '#f0f9e8':
+                      '#454545';
 }
 
+function style_feature(feature) {
+    return {
+        fillColor: getColor(feature.properties.TotalPop),
+        weight: 2,
+        opacity: 0.8,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
 
 function highlightFeature(e) {
     var layer = e.target;
@@ -58,7 +49,6 @@ function resetHighlight(e) {
 }
 
 
-
 // Zooming into feature after selecting it
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
@@ -68,7 +58,7 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        click: zoomToFeature
+        click: zoomToFeature,
     });
 }
 
@@ -76,8 +66,10 @@ function onEachFeature(feature, layer) {
 // Calling the functions
 tractPopData = L.geoJSON(popData, {
     style: style_feature,
-    onEachFeature: onEachFeature
+    onEachFeature: onEachFeature,
 }).addTo(map);
+
+
 
 //Custom control for population density data
 var info = L.control();

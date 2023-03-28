@@ -14,7 +14,8 @@ function getColor(d) {
            d > 1000  ? '#7bccc4' :
            d > 500  ? '#a8ddb5' :
            d > 250   ? '#ccebc5' :
-           d < 0    ? '#f0f9e8':
+           d > 0    ? '#f0f9e8':
+           d = 0    ? '#454545':
                       '#454545';
 }
 
@@ -135,6 +136,26 @@ const setFilter = () => {
 
 minSelector.addEventListener('change', setFilter);
 maxSelector.addEventListener('change', setFilter);
-//
+
+// Legend
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 250, 500, 1000, 1500, 3000],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
 
 

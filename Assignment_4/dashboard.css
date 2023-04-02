@@ -1,3 +1,21 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  --bs-body-font-family: var(--bs-font-monospace);
+  --bs-body-line-height: 1.4;
+  --bs-body-bg: var(--bs-gray-100);
+}
+
+#SLR1_titleid{
+  color: #222222;
+  padding-top: 20px;
+}
+
 .form-control-primary {
     margin: 10px;
     opacity: 0.2;
@@ -11,7 +29,7 @@
   top: 0;
   z-index: 100;
   padding: 70px 0 0 10px;
-  border-right: 1px solid #d3d3d3;
+  /* border-right: 1px solid #d3d3d3; */
 }
   
 .left-sidebar {
@@ -21,20 +39,29 @@
 }
   
 .sidebar-nav li .nav-link {
-  color: #333;
   font-weight: 500;
 }
 
-.container_dashboards {
-  color: #333;
-  font-weight: 200;
-  padding-left: 150px;
-  padding-top:20px;
-  padding-bottom: 20px;
+.SLRtab_content{
+  font-weight: 500;
+  /* padding-left: 200px; */
+  padding-top: 30px;
+  padding-bottom: 30px;  
+}
+
+.card_body{
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 30px; 
+}
+
+.nav-link{
+  color: #222222;
 }
 
 main {
-  padding-top: 70px;
+  padding-top: 30px;
+  color: #222222;
 }
 
 
@@ -46,31 +73,4 @@ map {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-}
-
-.info {
-  padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
-  background: white;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 5px;
-}
-
-.info h4 {
-  margin: 0 0 5px;
-  color: #777;
-}
-
-.legend {
-line-height: 18px;
-color: #555;
-}
-
-.legend i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin-right: 8px;
-  opacity: 0.7;
 }

@@ -9,7 +9,22 @@ body {
   --bs-body-font-family: var(--bs-font-monospace);
   --bs-body-line-height: 1.4;
   --bs-body-bg: var(--bs-gray-100);
+  margin: 0;
 }
+
+main {
+  padding-top: 30px;
+  color: #0d6efd;
+  /* color: #222222; */
+}
+
+map { 
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* SLR Map Style */
 
 #SLR1_titleid{
   color: #222222;
@@ -44,7 +59,7 @@ body {
 
 .SLRtab_content{
   font-weight: 500;
-  /* padding-left: 200px; */
+  padding-left: 200px;
   padding-top: 30px;
   padding-bottom: 30px;  
 }
@@ -59,18 +74,28 @@ body {
   color: #222222;
 }
 
-main {
-  padding-top: 30px;
+/* Credits page style */
+
+.credits_2columns {
+  padding-top: 50px;
+}
+
+.credits_3columns {
+  padding-top: 25px;
+}
+
+dd{
   color: #222222;
 }
 
+/* introduction page styling */
 
-body {
-  margin: 0;
+#intro_heading {
+  padding-top: 40px;
 }
 
-map { 
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+#intro_paragraphs {
+  color: #222222;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

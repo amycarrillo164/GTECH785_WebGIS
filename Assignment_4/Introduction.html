@@ -2,31 +2,132 @@
 <html lang="en">
 <head>
     <!-- Required meta tages -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="writing.css" > -->
     <link rel="stylesheet" href="dashboard.css" >
-
-    <title>Introduction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <title>Credits</title>
 </head>
 <body>
-    <h1> Introduction </h1>
-        <p1> 
-            Boston Harbor Islands is home to the only partially drowned drumlin field in North America. The islands are dominated by one or several oval-shaped hills called drumlins that were formed during the last glaciation. As the sea level rose with the end of the glaciation, the Boston Harbor drumlin field was gradually flooded. Following a rapid decrease in sea level, the land rebounded upward. This left behind hills sticking out of the water, also known as drumlins. The gradual erosion of drumlins has provided sediment to form sandy spits often connecting nearby drumlins, creating the islands and bluffs we see today.
-        </p1>
 
-        <p2>
-            There is no shortage of historical and natural resources located at the Boston Harbor Islands. The area is an important breeding area for coastal breeding birds that supports a significant portion of Massachusetts breeding colonies of wading birds (egrets, night-herons, ibis), eider ducks, and gulls and cormorants. The Islands are also home to the northernmost breeding area for American Oystercatchers in the United States. The coastal and nearshore wetlands are important habitats providing wildlife habitat and aid in reducing flooding by storing floodwaters and slowing wave energy. Nearly all the Boston Harbor Islands contain significant cultural and infrastructure resources relating to early historic and indigenous use, resource extraction, trade and navigation, military use, and recreation facilities. Included in the park are six listings on the National Register of Historic Places. Three of these six listings are also National Historic Landmarks.
-        </p2>
+    <!-- Creating a navbar -->
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Boston Harbor Focal Risk Analysis</a>
+        <ul class="navbar-nav px-3">
+        </ul>
+    </nav>
 
-        <p3>
-            Although flooding and sediment erosion and deposition along coastal park shores are natural processes, the rate and extent to which these processes are occurring is increasing, mainly due to accelerating sea-level rise (SLR) and increased frequency of intense storms. Although there are 34 islands and peninsulas located at Boston Harbor, the study focuses on Peddocks, Thompson, Long, Georges, Gallops, Lovells, Little Brewster, Great Brewster, and Calf.
-        </p3>
+    <!-- side bar container -->
+    <div class="container">
+        <div class="row">
+            <!-- sidebar -->
+            <div class="col-md-2 bg-light d-none d-md-block sidebar">
+                <div class="left-sidebar">
 
-        <p4>
-            One of the outputs of the study will be a finalized risk layer that points out areas of high risk of focal resource destruction. Areas considered of “high risk” will depend on a stakeholder-based analysis of what is considered a focal resource and what is considered destructive flooding. The high-risk areas will then undergo three forms of solutions modeling – coastal protection infrastructure, increasing existing oyster populations, and expanding salt marshes.
-        </p4>
+                    <ul class="nav flex-column sidebar-nav data-bs-theme="dark">
+
+                        <!-- side bar tabs -->
+                        <li class="nav-item">
+                          <a class="nav-link active" href="Introduction.html">
+                            <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                            Introduction
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link active" href="A4.html">
+                            <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                            SLR Scenerios
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                              <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                              Areas of High Risk
+                            </a>
+                          </li>
+
+                        <li class = "nav-item">
+                          <a class="nav-link active" href="#">
+                            <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                            Methods
+                          </a>
+                        </li>
+
+                        <li class = "nav-item">
+                          <a class="nav-link active" data-toggle="dropdown" href="#">
+                            <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                            Data
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">GeoSpatial Data</a></li>
+                              <li><a href="#">Scripts</a></li>
+                              <li><a href="Credits.html">Credits</a></li>
+                            </ul>
+                        </li>
+
+                        <li class = "nav-item">
+                          <a class="nav-link active" data-toggle="dropdown" href="#Data">
+                            <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z" clip-rule="evenodd"/></svg>
+                            Islands
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Thomspon</a></li>
+                              <li><a href="#">Lovells</a></li>
+                              <li><a href="#">Georges</a></li>
+                              <li><a href="#">Long</a></li>
+                              <li><a href="#">Peddocks</a></li>
+                              <li><a href="#">Gallops</a></li>
+                              <li><a href="#">Little Brewster</a></li>
+                              <li><a href="#">Great Brewster</a></li>
+                              <li><a href="#">Calf</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <main role = "main" class="col-md-9 ml-sm-auto col-lg-10 px-1">
+        <h1 id = 'intro_heading'>Introduction</h1>
+            <div class="container">
+                <div class="row"> 
+                    <p1 id = 'intro_paragraphs'>
+                     Boston Harbor Islands is home to the only partially drowned drumlin field in North America. The islands are dominated by one or several oval-shaped hills called drumlins that were formed during the last glaciation. As the sea level rose with the end of the glaciation, the Boston Harbor drumlin field was gradually flooded. Following a rapid decrease in sea level, the land rebounded upward. This left behind hills sticking out of the water, also known as drumlins. The gradual erosion of drumlins has provided sediment to form sandy spits often connecting nearby drumlins, creating the islands and bluffs we see today.
+                    </p1>
+                
+                <div class="row"> 
+                    <p1 id = 'intro_paragraphs'>
+                    There is no shortage of historical and natural resources located at the Boston Harbor Islands. The area is an important breeding area for coastal breeding birds that supports a significant portion of Massachusetts breeding colonies of wading birds (egrets, night-herons, ibis), eider ducks, and gulls and cormorants. The Islands are also home to the northernmost breeding area for American Oystercatchers in the United States. The coastal and nearshore wetlands are important habitats providing wildlife habitat and aid in reducing flooding by storing floodwaters and slowing wave energy. Nearly all the Boston Harbor Islands contain significant cultural and infrastructure resources relating to early historic and indigenous use, resource extraction, trade and navigation, military use, and recreation facilities. Included in the park are six listings on the National Register of Historic Places. Three of these six listings are also National Historic Landmarks.
+                    </p1>
+                
+                <div class="row"> 
+                <p1 id = 'intro_paragraphs'>
+                    Although flooding and sediment erosion and deposition along coastal park shores are natural processes, the rate and extent to which these processes are occurring is increasing, mainly due to accelerating sea-level rise (SLR) and increased frequency of intense storms. Although there are 34 islands and peninsulas located at Boston Harbor, the study focuses on Peddocks, Thompson, Long, Georges, Gallops, Lovells, Little Brewster, Great Brewster, and Calf.
+                </p1>
+
+                <div class="row"> 
+                <p1 id = 'intro_paragraphs'>
+                    One of the outputs of the study will be a finalized risk layer that points out areas of high risk of focal resource destruction. Areas considered of “high risk” will depend on a stakeholder-based analysis of what is considered a focal resource and what is considered destructive flooding. The high-risk areas will then undergo three forms of solutions modeling – coastal protection infrastructure, increasing existing oyster populations, and expanding salt marshes.
+                </p1>
+    
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
+
 </body>
 </html>
